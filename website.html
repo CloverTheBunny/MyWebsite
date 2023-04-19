@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AgentClover's Website</title>
+	<style>
+		header {
+			background-color: #333;
+			color: white;
+			text-align: center;
+			font-family: 'Bebas Neue', cursive;
+		}
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		nav li {
+			margin: 0 10px;
+		}
+
+		nav a {
+			font-size: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			color: white;
+			font-family: 'Outfit Black', sans-serif;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		#home, #about {
+			margin: 50px;
+			font-size: 32px;
+			line-height: 1.5;
+			font-family: 'Outfit Light', sans-serif;
+		}
+
+		#home h1, #about h1 {
+			margin: 0;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#" id="home-link">Home</a></li>
+				<li><a href="#" id="about-link">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div id="home">
+			<h1>Hi! I'm AgentClover! A youtuber that makes minecraft/roblox videos!</h1>
+		</div>
+
+		<div id="about" style="display:none">
+			<h1>I started my channel in 2021 and I haven't had much success. Hopefully 2023 has some hope for me.
+			My Youtube Channel is 
+		https://www.youtube.com/@AgentClover</h1>
+		</div>
+	</main>
+
+	<script>
+		// JavaScript code for switching between pages
+		const homeLink = document.getElementById('home-link');
+		const aboutLink = document.getElementById('about-link');
+		const homePage = document.getElementById('home');
+		const aboutPage = document.getElementById('about');
+
+		homeLink.addEventListener('click', function(event) {
+			event.preventDefault();
+			homePage.style.display = 'block';
+			aboutPage.style.display = 'none';
+		});
+
+		aboutLink.addEventListener('click', function(event) {
+			event.preventDefault();
+			homePage.style.display = 'none';
+			aboutPage.style.display = 'block';
+		});
+	</script>
+</body>
+</html>
